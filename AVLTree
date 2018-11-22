@@ -1,0 +1,28 @@
+class AVLTree {
+  AVLTreeNode root;
+  // Note: you may define other variables here
+
+  public AVLTree(int data) {
+	  root = new AVLTreeNode(data);
+	  
+  }
+
+  public void createTestTree() {
+	  root = new AVLTreeNode(4);
+	  root.left = new AVLTreeNode(2);
+	  root.right = new AVLTreeNode(6);
+	  root.left.left = new AVLTreeNode(1);
+	  root.left.right = new AVLTreeNode(3);
+	  root.right.left = new AVLTreeNode(5);
+	  root.right.right = new AVLTreeNode(7);
+  }
+
+  public void print(AVLTreeNode root) {
+	  if (root == null) {
+		  return;
+	  }
+	  System.out.println(root.value + " ");
+	  print(root.left);
+	  print(root.right);
+  } 
+  }
